@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "budgeteer"
+version = "0.1.0"
+description = "Personal finance tracker for the terminal (SQLite-backed CLI)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "someone-rs" }]
+keywords = ["finance", "budget", "cli", "sqlite"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial",
+]
+
+[project.scripts]
+budgeteer = "budgeteer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
